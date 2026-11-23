@@ -1,5 +1,8 @@
-<title>Jac's Meal Picker</title>
+<!doctype html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
+<title>Jac's Meal Picker</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="claude:viewport-fit-sides" content="cover">
 
@@ -36,6 +39,12 @@
   --font-display:"Baloo 2","Trebuchet MS",system-ui,sans-serif;
   --font-body:"Nunito","Segoe UI",system-ui,sans-serif;
   color-scheme: light;
+}
+html{
+  /* keep content clear of the phone's system bars when served standalone;
+     inside a Claude artifact the wrapper sets the same thing */
+  padding-top:env(safe-area-inset-top, 0px);
+  padding-bottom:env(safe-area-inset-bottom, 0px);
 }
 html,body{min-height:100%}
 body{
@@ -195,6 +204,8 @@ h2{font-family:var(--font-display);font-size:clamp(1.3rem,5.6vw,1.6rem);line-hei
   .progress-fill{transition:none}
 }
 </style>
+</head>
+<body>
 
 <div class="shell">
 
@@ -915,3 +926,6 @@ var COPY = {
   show(0);
 })();
 </script>
+
+</body>
+</html>
